@@ -74,9 +74,73 @@ Communicate statelessly
 
 Principle 1 – everything is a resource
 
-To understand this principle, one must conceive the idea of representing data by a specificformat and not by a physical file. Each piece of data available on the Internet has a formatthat could be described by a content type. For example, JPEG images; MPEG videos; HTML,XML, and text documents; and binary data are all resources with the following contenttypes: image/jpeg, video/mpeg, text/html, text/xml, and application/octet-stream.				
-​			
-​		
-​			
-​		
-​	
+To understand this principle, one must conceive the idea of representing data by a specificformat and not by a physical file. Each piece of data available on the Internet has a formatthat could be described by a content type. For example, JPEG images; MPEG videos; HTML,XML, and text documents; and binary data are all resources with the following contenttypes: image/jpeg, video/mpeg, text/html, text/xml, and application/octet-stream.		
+
+原则1-万物皆资源
+
+为了理解这个原则，人们必须设想一种通过特定格式而不是物理文件来表示数据的想法。 互联网上可用的每个数据都可以通过内容类型来描述。 例如，JPEG图像; MPEG视频; HTML，XML和文本文档; 二进制数据都是具有以下内容类型的资源：image / jpeg，video / mpeg，text / html，text / xml和application / octet-stream。		
+
+Principle 2 – each resource is identifiable by aunique identifier
+
+Since the Internet contains so many different resources, they all should be accessible viaURIs and should be identified uniquely. Furthermore, the URIs can be in a human-readableformat, despite the fact that their consumers are more likely to be software programs ratherthan ordinary humans.
+
+Human-readable URIs keep data self-descriptive and ease further development against it.This helps you to reduce the risk of logical errors in your programs to a minimum.
+
+Here are a few sample examples of such URIs:
+
+```
+        http://www.mydatastore.com/images/vacation/2014/summer
+        http://www.mydatastore.com/videos/vacation/2014/winter
+        http://www.mydatastore.com/data/documents/balance?format=xml
+        http://www.mydatastore.com/data/archives/2014
+```
+
+These human-readable URIs expose different types of resources in a straightforward manner. In the example, it is quite clear that the media types of these resources are asfollows:
+
+Images
+Videos
+XML documents
+Some kinds of binary archive documents
+
+原则2-所有资源都可以通过唯一标识符（URI）来标识
+
+由于互联网包含如此多的不同资源，所有这些资源都可以通过浏览器访问，应该被唯一标识。 此外，URI可以是人类可读格式，尽管事实上，他们的消费者更可能是普通人的软件程序。
+
+保持URIs的可读性，使开发更容易，降低风险错误。
+
+这有几个例子
+
+```
+http://www.mydatastore.com/images/vacation/2014/summer
+http://www.mydatastore.com/videos/vacation/2014/winter
+http://www.mydatastore.com/data/documents/balance?format=xml
+http://www.mydatastore.com/data/archives/2014
+```
+
+这些可读性的链接比较直观的展示了资源的不同。在这个例子中，十分清晰展示了下列几种媒体资源
+
+```
+Images
+Videos
+XML documents
+一些二进制存档文件
+```
+
+Principle 3 – use the standard HTTP methods
+
+The native HTTP protocol (RFC 2616) defines eight actions, also known as HTTP verbs:
+
+```
+GET
+POST
+PUT
+DELETE
+HEAD
+OPTIONS
+TRACE
+CONNECT
+```
+
+原则3-使用标准的HTTP方法
+
+本地HTTP协议（RFC 2616）定义了八个请求方式：
